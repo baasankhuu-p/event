@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex flex-col  h-screen pt-20 lg:pt-0 md:justify-center items-center px-10 m-0"
+      className="flex flex-col h-screen pt-16 lg:pt-0 md:justify-center items-center px-10 m-0"
     >
       <Image src={bg} alt="Background" layout="fill" objectFit="cover" />
       <div className="z-10 flex flex-col items-center">
