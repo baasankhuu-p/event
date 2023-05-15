@@ -7,7 +7,7 @@ const navitions = [
   ["About", "#about"],
   ["Schedule", "#schedule"],
   ["Speakers", "#speackers"],
-  ["Sponsors", "#partners"],
+  ["Sponsors", "#sponsors"],
   ["Contacts", "#contacts"],
 ];
 export default function Header() {
@@ -17,7 +17,7 @@ export default function Header() {
   }
   return (
     <div>
-      <div className="fixed top-0 z-20 w-full flex md:flex-col sm:flex-row px-7 py-2">
+      <div className="fixed top-0 z-50 w-full flex lg:flex-col sm:flex-row px-7 py-2">
         <Logo />
 
         <nav
@@ -39,14 +39,14 @@ export default function Header() {
         <div className="flex flex-col lg:hidden" onClick={() => toggle()}>
           {toggleMore ? (
             <div
-              className="flex cursor-pointer border-2 rounded-full justify-center items-center "
+              className="flex flex-col w-10 h-10 cursor-pointer border-2 rounded-full justify-center items-center "
               style={{ borderColor: "#0F2437" }}
             >
               <CgDetailsMore color="0F2437" className="w-7 h-7 m-2" />
             </div>
           ) : (
             <div
-              className="flex cursor-pointer border-2 rounded-full justify-center items-center "
+              className="flex flex-col w-10 h-10  cursor-pointer border-2 rounded-full justify-center items-center "
               style={{ borderColor: "white" }}
             >
               <MdOutlineClear color="white" className="w-7 h-7 m-2" />
@@ -55,8 +55,8 @@ export default function Header() {
         </div>
       </div>
       {!toggleMore && (
-        <div className="lg:hidden w-full fixed pt-16 h-full bg-white popup-content nav-popup-content z-10">
-          <nav className="lg:hidden w-screen h-3/5 flex flex-col justify-around">
+        <div className="lg:hidden w-full fixed h-full bg-white popup-content nav-popup-content z-20">
+          <nav className="lg:hidden w-screen h-2/5 flex flex-col justify-around">
             {navitions.map(([title, url], index) => (
               <a
                 key={index}

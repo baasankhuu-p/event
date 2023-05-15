@@ -5,7 +5,8 @@
 .nav-popup-content {
     border: none;
     text-align: center;
-    padding-top: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     overflow-y: scroll;
 }
 .popup-content {
