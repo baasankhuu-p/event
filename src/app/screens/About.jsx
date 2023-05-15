@@ -31,7 +31,7 @@ export default function About() {
           >
             ULAANBAATAR
           </div>
-          <div className=" text-center font-medium w-2/3">
+          <div className=" text-center font-medium lg:w-2/3 md:w-full">
             IMMERSE YOURSELF IN A COMMUNITY-LED CONFERENCE DESIGNED FOR AWS
             USERS, WHERE YOU CAN GLEAN KNOWLEDGE FROM FELLOW HANDS-ON
             PRACTITIONERS WHO SHARE YOUR MINDSET.
