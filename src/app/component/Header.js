@@ -17,11 +17,11 @@ export default function Header() {
   }
   return (
     <div>
-      <div className=" fixed top-0 z-10 w-full flex flex-row justify-between px-7 py-2 items-center  ">
+      <div className="fixed top-0 z-20 w-full flex md:flex-col sm:flex-row px-7 py-2">
         <Logo />
 
         <nav
-          className="hidden lg:flex sm:justify-center space-x-4 z-[10] px-4 py-2 rounded-full"
+          className="hidden lg:flex sm:justify-center lg:justify-around space-x-4 z-[10] px-4 py-2 rounded-full mx-20"
           style={{ backgroundColor: "#0F2437" }}
         >
           {navitions.map(([title, url], index) => (
@@ -34,14 +34,6 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <div className="hidden lg:flex rounded-full py-2">
-          <a
-            href="#register"
-            className="rounded-lg px-2 py-1 text-white font-medium hover:text-slate-300 mx-4"
-          >
-            Register
-          </a>
-        </div>
 
         {/* mobile nav */}
         <div className="flex flex-col lg:hidden" onClick={() => toggle()}>
@@ -63,7 +55,7 @@ export default function Header() {
         </div>
       </div>
       {!toggleMore && (
-        <div className="lg:hidden w-full fixed pt-16 h-full bg-white popup-content nav-popup-content">
+        <div className="lg:hidden w-full fixed pt-16 h-full bg-white popup-content nav-popup-content z-10">
           <nav className="lg:hidden w-screen h-3/5 flex flex-col justify-around">
             {navitions.map(([title, url], index) => (
               <a
