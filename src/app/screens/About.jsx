@@ -8,7 +8,13 @@ export default function About() {
       id="about"
       className="flex flex-col h-screen pt-16 lg:pt-0 md:justify-center items-center px-10 m-0"
     >
-      <Image src={bg} alt="Background" layout="fill" objectFit="cover" />
+      <Image
+        src={bg}
+        alt="Background"
+        layout="fill"
+        objectFit="cover"
+        className="w-screen h-sceen"
+      />
       <div className="z-10 flex flex-col items-center">
         <Image src={aws} width={140} height={140} alt="AWS" />
         <div className="text-white font-medium text-3xl lg:text-5xl text-center">
