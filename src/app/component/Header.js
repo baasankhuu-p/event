@@ -4,13 +4,11 @@ import Logo from "./Logo";
 import { CgDetailsMore } from "react-icons/cg";
 import { MdOutlineClear } from "react-icons/md";
 const navitions = [
-  ["ABOUT", "#about"],
-  ["SCHEDULE", "#schedule"],
-  ["SPEAKERS", "#speackers"],
-  ["PARTNERS", "#partners"],
-  ["STORE", "#store"],
-  ["WORKSHOPS", "#workshops"],
-  ["CONTACTS", "#contacts"],
+  ["About", "#about"],
+  ["Schedule", "#schedule"],
+  ["Speakers", "#speackers"],
+  ["Sponsors", "#partners"],
+  ["Contacts", "#contacts"],
 ];
 export default function Header() {
   const [toggleMore, setToggleMore] = useState(true);
@@ -19,15 +17,18 @@ export default function Header() {
   }
   return (
     <div>
-      <div className="bg-black fixed top-0 z-10 w-full flex flex-row justify-between px-7 py-2 items-center  bg-black">
+      <div className=" fixed top-0 z-10 w-full flex flex-row justify-between px-7 py-2 items-center  ">
         <Logo />
 
-        <nav className="hidden lg:flex sm:justify-center space-x-4 z-[10] bg-black">
+        <nav
+          className="hidden lg:flex sm:justify-center space-x-4 z-[10] px-4 py-2 rounded-full"
+          style={{ backgroundColor: "#0F2437" }}
+        >
           {navitions.map(([title, url], index) => (
             <a
               key={index}
               href={url}
-              className="rounded-lg px-2 py-1 text-slate-200 font-medium hover:bg-slate-100 hover:text-slate-900"
+              className="rounded-lg px-4 py-0.5 text-white font-medium hover:bg-slate-100 hover:text-black"
             >
               {title}
             </a>
@@ -45,19 +46,25 @@ export default function Header() {
         {/* mobile nav */}
         <div className="flex flex-col lg:hidden" onClick={() => toggle()}>
           {toggleMore ? (
-            <div className="flex cursor-pointer border-2 rounded-full justify-center items-center border-white">
-              <CgDetailsMore color="white" className="w-7 h-7 m-2" />
+            <div
+              className="flex cursor-pointer border-2 rounded-full justify-center items-center "
+              style={{ borderColor: "#0F2437" }}
+            >
+              <CgDetailsMore color="0F2437" className="w-7 h-7 m-2" />
             </div>
           ) : (
-            <div className="flex cursor-pointer border-2 rounded-full justify-center items-center border-white">
+            <div
+              className="flex cursor-pointer border-2 rounded-full justify-center items-center "
+              style={{ borderColor: "white" }}
+            >
               <MdOutlineClear color="white" className="w-7 h-7 m-2" />
             </div>
           )}
         </div>
       </div>
       {!toggleMore && (
-        <div className="top-10 bottom-10 fixed pt-16 h-full bg-white popup-content nav-popup-content">
-          <nav className="w-screen h-3/5 flex flex-col lg:hidden justify-around">
+        <div className="lg:hidden w-full fixed pt-16 h-full bg-white popup-content nav-popup-content">
+          <nav className="lg:hidden w-screen h-3/5 flex flex-col justify-around">
             {navitions.map(([title, url], index) => (
               <a
                 key={index}
