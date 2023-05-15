@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex flex-col h-screen pt-16 lg:pt-0 md:justify-center items-center px-10 m-0"
+      className="flex flex-col h-screen pt-16 lg:pt-0 md:justify-center items-center px-10 m-0 bg-black"
     >
       <Image
         src={bg}
