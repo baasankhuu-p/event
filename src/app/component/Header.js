@@ -63,7 +63,7 @@ export default function Header() {
                 key={index}
                 onClick={() => toggle()}
                 href={url}
-                className="w-full h-auto text-center py-2 hover:bg-slate-400 text-white font-medium"
+                className="w-full m-0 text-center py-2 hover:bg-slate-400 text-white font-medium"
               >
                 {title}
               </a>
