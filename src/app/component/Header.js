@@ -18,13 +18,14 @@ export default function Header() {
     setToggleMore(!toggleMore);
   }
   return (
-    <>
-      <div className="w-full flex flex-row justify-between px-7 py-2 items-center z-20 bg-black">
+    <div>
+      <div className="bg-black fixed top-0 z-10 w-full flex flex-row justify-between px-7 py-2 items-center  bg-black">
         <Logo />
 
         <nav className="hidden lg:flex sm:justify-center space-x-4 z-[10] bg-black">
-          {navitions.map(([title, url]) => (
+          {navitions.map(([title, url], index) => (
             <a
+              key={index}
               href={url}
               className="rounded-lg px-2 py-1 text-slate-200 font-medium hover:bg-slate-100 hover:text-slate-900"
             >
@@ -54,20 +55,22 @@ export default function Header() {
           )}
         </div>
       </div>
-
       {!toggleMore && (
-        <nav className="fixed w-screen h-screen flex flex-col lg:hidden  justify-around">
-          {navitions.map(([title, url]) => (
-            <a
-              onClick={() => toggle()}
-              href={url}
-              className="w-full h-auto text-center py-2 hover:bg-slate-400"
-            >
-              {title}
-            </a>
-          ))}
-        </nav>
+        <div className="top-10 bottom-10 fixed pt-16 h-full bg-white popup-content nav-popup-content">
+          <nav className="w-screen h-3/5 flex flex-col lg:hidden justify-around">
+            {navitions.map(([title, url], index) => (
+              <a
+                key={index}
+                onClick={() => toggle()}
+                href={url}
+                className="w-full h-auto text-center py-2 hover:bg-slate-400 text-white font-medium"
+              >
+                {title}
+              </a>
+            ))}
+          </nav>
+        </div>
       )}
-    </>
+    </div>
   );
 }

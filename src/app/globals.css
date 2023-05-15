@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-popup-content {
+    height: 100%;
+    width: 100%;
+    border: none;
+    text-align: center;
+    padding-top: 10rem;
+    overflow-y: scroll;
+}
+.popup-content {
+    width: 43.25rem;
+    border-width: 2px;
+    --tw-border-opacity: 1;
+    border-color: rgb(233 73 61/var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(23 23 23/var(--tw-bg-opacity));
+}
