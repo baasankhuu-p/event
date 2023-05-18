@@ -23,7 +23,7 @@ export default function About() {
       </div>
       <div className="text-white z-10 flex flex-col lg:flex-row justify-between px-4">
         <div style={{ flex: 1 }}>
-          <div className="text-white font-medium text-sm lg:text-2xl text-center mx-10">
+          <div className="text-white font-medium text-sm lg:text-4xl text-center mx-10">
             HUB INNOVATION CENTER
           </div>
         </div>
@@ -43,14 +43,14 @@ export default function About() {
             PRACTITIONERS WHO SHARE YOUR MINDSET.
           </div>
           <div
-            className="py-2 px-4 rounded-full font-medium hover:px-5 cursor-pointer my-4"
+            className="py-2 px-4 rounded-full font-bold hover:px-5 cursor-pointer my-4"
             style={{ backgroundColor: "#0F2437" }}
           >
             REGISTER
           </div>
         </div>
         <div
-          className="text-white font-medium text-2xl text-center"
+          className="text-white font-medium text-4xl text-center"
           style={{ flex: 1 }}
         >
           2023.06.07

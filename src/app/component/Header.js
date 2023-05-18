@@ -5,8 +5,8 @@ import { CgDetailsMore } from "react-icons/cg";
 import { MdOutlineClear } from "react-icons/md";
 const navitions = [
   ["About", "#about"],
-  ["Schedule", "#schedule"],
   ["Speakers", "#speackers"],
+  ["Schedule", "#schedule"],
   ["Sponsors", "#sponsors"],
   ["Contacts", "#contacts"],
 ];

@@ -5,14 +5,16 @@ import Schedule from "./screens/Schedule";
 import Speakers from "./screens/Speakers";
 import Sponsers from "./screens/Sponsors";
 import Community from "./screens/Community";
+import Info from "./screens/Info";
 export default function Home() {
   return (
     <div>
       <Header />
       <About />
       <Community />
-      <Schedule />
+      <Info/>
       <Speakers />
+      <Schedule />
       <Sponsers />
       <Contacts />
     </div>
