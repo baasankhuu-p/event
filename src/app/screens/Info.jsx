@@ -18,7 +18,7 @@ export default function Info() {
     ]
   ];
   return (
-    <section id="info" className="relative flex flex-col h-screen bg-red-700 justify-center">
+    <section id="info" className="relative flex flex-col h-screen bg-black justify-center">
       <Image
         src={bg}
         alt="Background"

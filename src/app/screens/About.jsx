@@ -50,7 +50,7 @@ export default function About() {
           </div>
         </div>
         <div
-          className="text-white font-medium text-4xl text-center"
+          className="text-white font-medium text-4xl text-center mx-10"
           style={{ flex: 1 }}
         >
           2023.06.07
